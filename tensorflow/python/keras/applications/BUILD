@@ -34,7 +34,7 @@ py_library(
         "//tensorflow/python:util",
         "//tensorflow/python/keras:backend",
         "//tensorflow/python/keras:engine",
-        "//tensorflow/python/keras/layers:layers_base",
+        "//tensorflow/python/keras/layers",
     ],
 )
 
@@ -242,6 +242,7 @@ tf_py_test(
     tags = [
         "no_oss",
         "no_pip",
+        "notsan",  # b/149100891
     ],
     deps = [
         ":applications",
